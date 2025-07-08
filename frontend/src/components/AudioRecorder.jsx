@@ -77,7 +77,7 @@ const AudioRecorder = ({ setFields }) => {
 
       // Step 1: Transcribe the audio
       const { data: transcriptionData } = await axios.post(
-        "https://test-medic-transcriber-latest.onrender.com/transcribe",
+        "https://dsamc-transcriber-ivf-ekthar-center-wvyf.onrender.com/transcribe",
         formData,
         {
           headers: {
@@ -93,7 +93,7 @@ const AudioRecorder = ({ setFields }) => {
 
       // Step 2: Extract fields from the transcript
       const { data: fieldsData } = await axios.post(
-        "https://test-medic-transcriber-latest.onrender.com/extract_fields",
+        "https://dsamc-transcriber-ivf-ekthar-center-wvyf.onrender.com/extract-fields",
         { transcript }
       );
 
