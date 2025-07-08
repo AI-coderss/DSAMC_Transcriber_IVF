@@ -23,7 +23,7 @@
      border: none;
      background: rgba(255, 255, 255, 0.2);
      backdrop-filter: blur(6px);
-     border-radius: 20px;
+     border-radius: 30px;
      padding: 10px;
      outline: none;
      font-size: 16px;
@@ -44,7 +44,7 @@
  
  /* Button styles with gradient and shadow effects */
  .icon-btn {
-     background: #007bff;
+     background: #F3AB25; /* Updated to requested color */
      border: none;
      border-radius: 50%;
      color: white;
@@ -90,7 +90,9 @@
      border-radius: 30px;
      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
  }
- 
+ .toggle-button{
+    background-color: #F3AB25;
+ }
  /* Media Queries */
  @media (max-width: 768px) {
      .chat-container {

@@ -16,7 +16,7 @@
 .main-content {
   flex: 3;
   margin-top: 5%;
-  background: #f8f9fa; /* Light neutral background */
+  background: #F1F1F1; /* Light neutral background */
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 8px; /* Rounded corners for modern look */
   margin: 15px; /* Spacing around the content */
@@ -29,6 +29,6 @@
     border: none;
     box-shadow:none;
     width: 100%;
-    background: #f8f9fa;
+    background: #F1F1F1;
   }
 }

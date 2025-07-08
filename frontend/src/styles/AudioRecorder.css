@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  background-color: #f8f9fa; /* Light neutral background */
+  background-color: #F1F1F1; /* Light neutral background */
   border-radius: 8px; /* Rounded corners */
 }
 
@@ -32,13 +32,14 @@ button {
   position: relative;
   padding: 0.8rem 1.5rem; /* Default padding for larger screens */
   font-size: 0.9rem; /* Default font size */
-  color: white;
-  background: linear-gradient(45deg, #007bff, #4f46e5); /* Gradient background */
+  color: #222; /* Dark text for contrast */
+  background: #F3AB25; /* Updated to requested color */
   border: none;
   border-radius: 6px; /* Slightly smaller radius */
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 button .shine-content {
@@ -68,11 +69,13 @@ button:hover::before {
 }
 
 button:hover {
-  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.4); /* Slightly reduced glow effect */
+  background: #d9961f; /* Slightly darker shade for hover */
+  color: #111;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.08); /* Slightly reduced glow effect */
 }
 
 button:disabled {
-  background-color: #d1d5db; /* Disabled state background */
+  background-color: #f7d9a7; /* Muted version of #F3AB25 for disabled */
   color: #6b7280; /* Disabled state text */
   cursor: not-allowed;
   box-shadow: none; /* Remove shadow */
@@ -119,10 +122,9 @@ button:disabled {
 
 
 
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+

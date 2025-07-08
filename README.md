@@ -1,70 +1,166 @@
-# Getting Started with Create React App
+# DSAMS Transcriber
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DSAMS Transcriber is a full-stack web application designed to assist medical professionals in transcribing and structuring patient consultation notes, especially for IVF (In Vitro Fertilization) consultations. The app leverages AI (OpenAI GPT and Whisper) to transcribe audio, extract structured medical fields, and provide AI-powered second opinions.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [Customization](#customization)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- 🎤 **Audio Recording & Transcription:** Record patient consultations and transcribe them using OpenAI Whisper.
+- 📝 **Automatic Field Extraction:** Extracts structured medical fields from transcripts for IVF consultations.
+- 🤖 **AI Second Opinion:** Get AI-generated medical opinions, diagnosis, and treatment plans.
+- 📋 **Easy Copy:** Copy any field's content to clipboard with a single click.
+- 🖥️ **Responsive UI:** Clean, modern, and responsive interface for desktop and mobile.
+- 🔒 **CORS Support:** Secure backend with CORS for local and deployed environments.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+dsams-transcriber/
+│
+├── backend/
+│   └── app.py                # Flask backend for transcription and AI
+│   └── requirements.txt      # Python dependencies
+│
+├── frontend/
+│   ├── public/
+│   │   └── img2.gif          # Decorative image for UI
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   ├── pages/
+│   │   │   ├── FirstTimeVisit.jsx
+│   │   │   ├── AISecondOpinion.jsx
+│   │   ├── styles/
+│   │   │   ├── App.css
+│   │   │   ├── Sidebar.css
+│   │   │   ├── FirstTimeVisit.css
+│   │   │   ├── AudioRecorder.css
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
+│
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Backend Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Navigate to the backend directory:**
+   ```sh
+   cd backend
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install Python dependencies:**
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Set up environment variables:**
+   - Create a `.env` file in the backend directory with your OpenAI API key:
+     ```
+     OPENAI_API_KEY=your_openai_api_key_here
+     ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Run the Flask server:**
+   ```sh
+   python app.py
+   ```
+   The backend will start on the default Flask port (usually 5000).
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Navigate to the frontend directory:**
+   ```sh
+   cd frontend
+   ```
 
-### Code Splitting
+2. **Install Node.js dependencies:**
+   ```sh
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Start the React development server:**
+   ```sh
+   npm start
+   ```
+   The app will run at [http://localhost:3000](http://localhost:3000).
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Environment Variables
 
-### Making a Progressive Web App
+- **Backend:**  
+  - `OPENAI_API_KEY` (required): Your OpenAI API key for GPT and Whisper models.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Frontend:**  
+  - No special environment variables required for local development.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+1. **Record Audio:**  
+   Use the audio recorder in the sidebar to record a patient consultation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. **Transcription & Extraction:**  
+   The backend transcribes the audio and extracts the following fields:
+   - Previous Investigation
+   - Previous IVF Trials
+   - Use of Medications currently
+   - Family History
+   - Patient History
+   - PT Impression / Diagnosis
+   - Problem List
+   - Doppler
+   - Others - Clinical Notes
+   - Plan Of Treatment
+   - Consultation Note
+   - Patient Instructions
 
-### `npm run build` fails to minify
+3. **Copy Fields:**  
+   Click the copy icon next to any field to copy its content.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. **AI Second Opinion:**  
+   Navigate to the "AI Second Opinion" page for AI-generated diagnosis and recommendations.
+
+---
+
+## Customization
+
+- **Styling:**  
+  Modify CSS files in `frontend/src/styles/` to change the look and feel.
+
+- **Field Extraction Logic:**  
+  Update the `extract_fields` function in `backend/app.py` to change how fields are extracted from transcripts.
+
+- **Routes & Components:**  
+  Add or modify React components in `frontend/src/components/` and `frontend/src/pages/` as needed.
+
+---
+
+## License
+
+This project is for educational and internal use. For commercial or clinical deployment, ensure compliance with medical data privacy regulations and obtain appropriate licenses for AI models.

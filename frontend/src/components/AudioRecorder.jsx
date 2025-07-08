@@ -121,7 +121,7 @@ const AudioRecorder = ({ setFields }) => {
         record={isRecording}
         pause={isPaused}
         onStop={onStop}
-        strokeColor="#007bff"
+        strokeColor="#F3AB25"
         visualSetting="frequencyBars"
         backgroundColor="#FFFFFF"
       />

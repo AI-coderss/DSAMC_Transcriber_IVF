@@ -58,6 +58,7 @@ const AISecondOpinion = () => {
       setTranscript(null); 
       processAIResponse(transcript); 
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [transcript, setTranscript]);
 
   useEffect(() => {
@@ -157,7 +158,7 @@ const AISecondOpinion = () => {
               {message.who === "bot" && (
                 <>
                   <figure className="avatar">
-                    <img src="./img4.gif" alt="Assistant Avatar" />
+                    <img src="./img2.gif" alt="Assistant Avatar" />
                   </figure>
                   <div className="message-text">
                     <ReactMarkdown>{message.msg}</ReactMarkdown>

@@ -27,15 +27,20 @@ def speech_to_text(audio_data_path):
 def extract_fields(transcript):
     prompt = f"""
         You are a medical transcription service provider. Your main task is to extract all relevant fields of text from the transcript: {transcript}
-        and display them in a user form format. Please strictly adhere to the following format template use medical terms:
-        **Personal History:**
-        **Chief Complaint:**
-        **Present Illness:**
-        **Medication History:**
-        **Past History:**
+        and display them in a user form format. Please strictly adhere to the following format template and use medical terms:
+        **Previous Investigation:**
+        **Previous IVF Trials:**
+        **Use of Medications currently:**
         **Family History:**
-        **Required Lab Tests and Procedures:**
-        Display each field on a new line, do not combine them into one sentence. Your main job is to facilitate data entry for doctors use Medical terminologies to describe the cases.
+        **Patient History:**
+        **PT Impression / Diagnosis:**
+        **Problem List:**
+        **Doppler:**
+        **Others - Clinical Notes:**
+        **Plan Of Treatment:**
+        **Consultation Note:**
+        **Patient Instructions:**
+        Display each field on a new line, do not combine them into one sentence. Your main job is to facilitate data entry for doctors. Use Medical terminologies to describe the cases.
     """
     response = client.chat.completions.create(
         model="gpt-4",
@@ -115,13 +120,18 @@ def extract():
 
     fields_result = extract_fields(transcript)
     fields = {
-        "personalHistory": fields_result.split("**Personal History:**")[1].split("**Chief Complaint:**")[0].strip(),
-        "chiefComplaint": fields_result.split("**Chief Complaint:**")[1].split("**Present Illness:**")[0].strip(),
-        "presentIllness": fields_result.split("**Present Illness:**")[1].split("**Medication History:**")[0].strip(),
-        "medicationHistory": fields_result.split("**Medication History:**")[1].split("**Past History:**")[0].strip(),
-        "pastHistory": fields_result.split("**Past History:**")[1].split("**Family History:**")[0].strip(),
-        "familyHistory": fields_result.split("**Family History:**")[1].split("**Required Lab Tests and Procedures:**")[0].strip(),
-        "requiredLabTestsAndProcedures": fields_result.split("**Required Lab Tests and Procedures:**")[1].strip(),
+        "previousInvestigation": fields_result.split("**Previous Investigation:**")[1].split("**Previous IVF Trials:**")[0].strip(),
+        "previousIVFTrials": fields_result.split("**Previous IVF Trials:**")[1].split("**Use of Medications currently:**")[0].strip(),
+        "currentMedications": fields_result.split("**Use of Medications currently:**")[1].split("**Family History:**")[0].strip(),
+        "familyHistory": fields_result.split("**Family History:**")[1].split("**Patient History:**")[0].strip(),
+        "patientHistory": fields_result.split("**Patient History:**")[1].split("**PT Impression / Diagnosis:**")[0].strip(),
+        "ptImpression": fields_result.split("**PT Impression / Diagnosis:**")[1].split("**Problem List:**")[0].strip(),
+        "problemList": fields_result.split("**Problem List:**")[1].split("**Doppler:**")[0].strip(),
+        "doppler": fields_result.split("**Doppler:**")[1].split("**Others - Clinical Notes:**")[0].strip(),
+        "othersClinicalNotes": fields_result.split("**Others - Clinical Notes:**")[1].split("**Plan Of Treatment:**")[0].strip(),
+        "planOfTreatment": fields_result.split("**Plan Of Treatment:**")[1].split("**Consultation Note:**")[0].strip(),
+        "consultationNote": fields_result.split("**Consultation Note:**")[1].split("**Patient Instructions:**")[0].strip(),
+        "patientInstructions": fields_result.split("**Patient Instructions:**")[1].strip(),
     }
     return jsonify(fields)
 

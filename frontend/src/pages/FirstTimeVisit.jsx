@@ -17,92 +17,57 @@ const FirstTimeVisit = ({ fields }) => {
   return (
     <div className="first-time-visit">
       <div className="title-container">
-        <h2>First Time Visit</h2>
-        <img src="/img1.gif" alt="Decoration" className="title-gif" />
+        <h2>IVF Consultation Page</h2>
+        <img src="/img2.gif" alt="Decoration" className="title-gif" />
       </div>
       <div className="fields">
         <div className="field-group">
-          <label htmlFor="personal-history">Personal History:</label>
+          <label htmlFor="previous-investigation">Previous Investigation:</label>
           <div className="textarea-container">
             <textarea
-              id="personal-history"
+              id="previous-investigation"
               className="neumorphic-input"
-              value={fields.personalHistory || ""}
+              value={fields.previousInvestigation || ""}
               readOnly
             ></textarea>
             <div
               className="copy-icon-container"
-              onClick={() => copyToClipboard(fields.personalHistory)}
+              onClick={() => copyToClipboard(fields.previousInvestigation)}
             >
               <i className="fas fa-copy copy-icon"></i>
             </div>
           </div>
         </div>
         <div className="field-group">
-          <label htmlFor="chief-complaint">Chief Complaint:</label>
+          <label htmlFor="previous-ivf-trials">Previous IVF Trials:</label>
           <div className="textarea-container">
             <textarea
-              id="chief-complaint"
+              id="previous-ivf-trials"
               className="neumorphic-input"
-              value={fields.chiefComplaint || ""}
+              value={fields.previousIVFTrials || ""}
               readOnly
             ></textarea>
             <div
               className="copy-icon-container"
-              onClick={() => copyToClipboard(fields.chiefComplaint)}
+              onClick={() => copyToClipboard(fields.previousIVFTrials)}
             >
               <i className="fas fa-copy copy-icon"></i>
             </div>
           </div>
         </div>
         <div className="field-group">
-          <label htmlFor="present-illness">Present Illness:</label>
+          <label htmlFor="current-medications">Use of Medications currently:</label>
           <div className="textarea-container">
             <textarea
-              id="present-illness"
+              id="current-medications"
               className="neumorphic-input"
-              value={fields.presentIllness || ""}
+              value={fields.currentMedications || ""}
               readOnly
             ></textarea>
             <div
               className="copy-icon-container"
-              onClick={() => copyToClipboard(fields.presentIllness)}
+              onClick={() => copyToClipboard(fields.currentMedications)}
             >
-              <i className="fas fa-copy copy-icon"></i>
-            </div>
-          </div>
-        </div>
-        <div className="field-group">
-          <label htmlFor="medication-history">Medication History:</label>
-          <div className="textarea-container">
-            <textarea
-              id="medication-history"
-              className="neumorphic-input"
-              value={fields.medicationHistory || ""}
-              readOnly
-            ></textarea>
-            <div
-              className="copy-icon-container"
-              onClick={() => copyToClipboard(fields.medicationHistory)}
-            >
-              <i className="fas fa-copy copy-icon"></i>
-            </div>
-          </div>
-        </div>
-        <div className="field-group">
-          <label htmlFor="past-history">Past History:</label>
-          <div className="textarea-container">
-            <textarea
-              id="past-history"
-              className="neumorphic-input"
-              value={fields.pastHistory || ""}
-              readOnly
-            ></textarea>
-            <div
-              className="copy-icon-container"
-              onClick={() => copyToClipboard(fields.pastHistory)}
-            >
-
               <i className="fas fa-copy copy-icon"></i>
             </div>
           </div>
@@ -125,21 +90,136 @@ const FirstTimeVisit = ({ fields }) => {
           </div>
         </div>
         <div className="field-group">
-          <label htmlFor="lab-tests">
-            Required Lab Tests and Procedures:
-          </label>
+          <label htmlFor="patient-history">Patient History:</label>
           <div className="textarea-container">
             <textarea
-              id="lab-tests"
+              id="patient-history"
               className="neumorphic-input"
-              value={fields.requiredLabTestsAndProcedures || ""}
+              value={fields.patientHistory || ""}
               readOnly
             ></textarea>
             <div
               className="copy-icon-container"
-              onClick={() =>
-                copyToClipboard(fields.requiredLabTestsAndProcedures)
-              }
+              onClick={() => copyToClipboard(fields.patientHistory)}
+            >
+              <i className="fas fa-copy copy-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div className="field-group">
+          <label htmlFor="pt-impression">PT Impression / Diagnosis:</label>
+          <div className="textarea-container">
+            <textarea
+              id="pt-impression"
+              className="neumorphic-input"
+              value={fields.ptImpression || ""}
+              readOnly
+            ></textarea>
+            <div
+              className="copy-icon-container"
+              onClick={() => copyToClipboard(fields.ptImpression)}
+            >
+              <i className="fas fa-copy copy-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div className="field-group">
+          <label htmlFor="problem-list">Problem List:</label>
+          <div className="textarea-container">
+            <textarea
+              id="problem-list"
+              className="neumorphic-input"
+              value={fields.problemList || ""}
+              readOnly
+            ></textarea>
+            <div
+              className="copy-icon-container"
+              onClick={() => copyToClipboard(fields.problemList)}
+            >
+              <i className="fas fa-copy copy-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div className="field-group">
+          <label htmlFor="doppler">Doppler:</label>
+          <div className="textarea-container">
+            <textarea
+              id="doppler"
+              className="neumorphic-input"
+              value={fields.doppler || ""}
+              readOnly
+            ></textarea>
+            <div
+              className="copy-icon-container"
+              onClick={() => copyToClipboard(fields.doppler)}
+            >
+              <i className="fas fa-copy copy-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div className="field-group">
+          <label htmlFor="others-clinical-notes">Others - Clinical Notes:</label>
+          <div className="textarea-container">
+            <textarea
+              id="others-clinical-notes"
+              className="neumorphic-input"
+              value={fields.othersClinicalNotes || ""}
+              readOnly
+            ></textarea>
+            <div
+              className="copy-icon-container"
+              onClick={() => copyToClipboard(fields.othersClinicalNotes)}
+            >
+              <i className="fas fa-copy copy-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div className="field-group">
+          <label htmlFor="plan-of-treatment">Plan Of Treatment:</label>
+          <div className="textarea-container">
+            <textarea
+              id="plan-of-treatment"
+              className="neumorphic-input"
+              value={fields.planOfTreatment || ""}
+              readOnly
+            ></textarea>
+            <div
+              className="copy-icon-container"
+              onClick={() => copyToClipboard(fields.planOfTreatment)}
+            >
+              <i className="fas fa-copy copy-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div className="field-group">
+          <label htmlFor="consultation-note">Consultation Note:</label>
+          <div className="textarea-container">
+            <textarea
+              id="consultation-note"
+              className="neumorphic-input"
+              value={fields.consultationNote || ""}
+              readOnly
+            ></textarea>
+            <div
+              className="copy-icon-container"
+              onClick={() => copyToClipboard(fields.consultationNote)}
+            >
+              <i className="fas fa-copy copy-icon"></i>
+            </div>
+          </div>
+        </div>
+        <div className="field-group">
+          <label htmlFor="patient-instructions">Patient Instructions:</label>
+          <div className="textarea-container">
+            <textarea
+              id="patient-instructions"
+              className="neumorphic-input"
+              value={fields.patientInstructions || ""}
+              readOnly
+            ></textarea>
+            <div
+              className="copy-icon-container"
+              onClick={() => copyToClipboard(fields.patientInstructions)}
             >
               <i className="fas fa-copy copy-icon"></i>
             </div>

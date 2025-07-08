@@ -1,13 +1,14 @@
 .sidebar {
   width: 21%; /* Set a fixed width for the sidebar */
   padding: 20px;
-  background-color: #f8f9fa; /* Light neutral background */
+  background-color: #F1F1F1; /* Light neutral background */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   color: #333; /* Neutral text color for readability */
   display: flex;
   flex-direction: column;
   gap: 20px; /* Space between sidebar items */
+  
 }
 
 .sidebar-item {
@@ -24,13 +25,13 @@
 }
 
 .sidebar-item:hover {
-  background-color: #007bff; /* Blue background on hover */
+  background-color: #F3AB25; /* Updated to requested color */
   color: #ffffff; /* White text on hover */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .sidebar-item.active {
-  background-color: #007bff; /* Blue background for active items */
+  background-color: #F3AB25; /* Updated to requested color */
   color: #ffffff; /* White text */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Strong shadow on active state */
 }
@@ -56,7 +57,7 @@
 }
 
 .sidebar-footer:hover {
-  background-color: #007bff; /* Blue background on hover */
+  background-color:  #F3AB25; /* Updated to requested color */
   color: #ffffff; /* White text on hover */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }

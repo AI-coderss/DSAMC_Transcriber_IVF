@@ -56,7 +56,7 @@ const Loader = ({ isLoading }) => {
         className="loading"
         autoplay
         loop
-        src={isLoading ? '/loading.json' : '/animation1.json'}
+        src={ '/loading1.json'}
         style={playerStyle}
       />
       <div className="loader-container">

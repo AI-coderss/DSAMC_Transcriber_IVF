@@ -9,13 +9,18 @@ import "./styles/App.css";
 const App = () => {
   // State to store extracted fields
   const [fields, setFields] = useState({
-    personalHistory: "",
-    chiefComplaint: "",
-    presentIllness: "",
-    medicationHistory: "",
-    pastHistory: "",
+    previousInvestigation: "",
+    previousIVFTrials: "",
+    currentMedications: "",
     familyHistory: "",
-    requiredLabTestsAndProcedures: "",
+    patientHistory: "",
+    ptImpression: "",
+    problemList: "",
+    doppler: "",
+    othersClinicalNotes: "",
+    planOfTreatment: "",
+    consultationNote: "",
+    patientInstructions: "",
   });
 
   return (

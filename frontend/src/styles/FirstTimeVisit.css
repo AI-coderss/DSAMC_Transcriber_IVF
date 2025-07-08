@@ -5,7 +5,8 @@
   padding: 30px;
   overflow: hidden;
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa; /* Light neutral background */
+
+  background-color: #F1F1F1; /* Light neutral background */
   border-radius: 8px; /* Rounded corners */
   height: auto; /* Dynamically adjust height */
 }

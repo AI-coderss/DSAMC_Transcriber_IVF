@@ -6,7 +6,7 @@ const Sidebar = ({ setFields }) => {
   return (
     <div className="sidebar">
       <AudioRecorder setFields={setFields} />
-      <div className="sidebar-footer">© 2024 Your Company</div>
+       <div className="sidebar-footer">© 2025 DSAMC</div>
     </div>
   );
 };
