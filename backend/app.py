@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
-from openai import OpenAI
+import openai
 import os
 import tempfile
 
@@ -11,8 +11,9 @@ app = Flask(__name__)
 CORS(app, origins=[
     "https://dsamc-transcriber-ivf-ekthar-center.onrender.com"], supports_credentials=True)
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
-client = OpenAI()
+client =openai
 
 def speech_to_text(audio_data_path):
     with open(audio_data_path, "rb") as audio_file:

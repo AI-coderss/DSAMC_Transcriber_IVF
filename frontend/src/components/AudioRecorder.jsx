@@ -56,13 +56,18 @@ const AudioRecorder = ({ setFields }) => {
 
     // Clear all fields
     setFields({
-      personalHistory: "",
-      chiefComplaint: "",
-      presentIllness: "",
-      medicationHistory: "",
-      pastHistory: "",
-      familyHistory: "",
-      requiredLabTestsAndProcedures: "",
+       previousInvestigation: "",
+        previousIVFTrials: "",
+        currentMedications: "",
+        familyHistory: "",
+        patientHistory: "",
+        ptImpression: "",
+        problemList: "",
+        doppler: "",
+        othersClinicalNotes: "",
+        planOfTreatment: "",
+        consultationNote: "",
+        patientInstructions: "",
     });
   };
 
