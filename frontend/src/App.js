@@ -36,9 +36,10 @@ const App = () => {
             </Routes>
           </div>
           {/* Pass setFields to Sidebar */}
-          <Sidebar setFields={setFields} />
+       
         </div>
       </div>
+         <Sidebar setFields={setFields} />
     </Router>
   );
 };

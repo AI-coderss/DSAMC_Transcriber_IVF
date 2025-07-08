@@ -1,5 +1,5 @@
 .chat-content {
-  width: 100%; /* Full width of the viewport */
+    width: 75%; /* 75%   of the viewport */
   height: 660px;
   margin: 0%;
   overflow-y: auto;

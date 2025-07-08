@@ -4,11 +4,11 @@
   align-items: center;
   padding: 30px;
   overflow: hidden;
+  width: 75%;
   font-family: Arial, sans-serif;
-
   background-color: #F1F1F1; /* Light neutral background */
   border-radius: 8px; /* Rounded corners */
-  height: auto; /* Dynamically adjust height */
+  height: 100%; /* Dynamically adjust height */
 }
 
 .title-container {
