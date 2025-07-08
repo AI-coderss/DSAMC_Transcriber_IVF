@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+    width: 100%;
   background: #ffffff; /* Clean white background */
   overflow: hidden;
 }
@@ -16,6 +17,7 @@
 .main-content {
   flex: 3;
   margin-top: 5%;
+  width:70%;
   background: #F1F1F1; /* Light neutral background */
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 8px; /* Rounded corners for modern look */
