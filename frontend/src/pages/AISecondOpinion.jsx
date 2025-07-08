@@ -186,7 +186,7 @@ const AISecondOpinion = () => {
                 <>
                   <div className="message-text">{message.msg}</div>
                   <figure className="user-avatar">
-                    <img src="./img1.gif" alt="User Avatar" />
+                    <img src="./img.gif" alt="User Avatar" />
                   </figure>
                 </>
               )}

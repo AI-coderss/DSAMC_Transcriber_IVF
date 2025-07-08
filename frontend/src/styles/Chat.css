@@ -169,7 +169,7 @@
 /* Chat Message Text */
 .message-text {
   display: inline-block;
-  max-width: 70%;
+  max-width: 85%;
   padding: 0.8rem;
   border-radius: 12px;
   font-size: 1rem;
