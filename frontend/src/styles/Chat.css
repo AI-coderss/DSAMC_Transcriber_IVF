@@ -186,8 +186,8 @@
 }
 
 .chat-message.me .message-text {
-  background: #007bff;
-  color: #fff;
+  background: #F3AB25; /* Updated to requested color */
+  color: #000000;
   border-radius: 10px 10px 0 10px;
 }
 
@@ -207,6 +207,7 @@
 }
 .user-avatar {
   margin-top: 50px;
+  background-color: #ffffff;
 }
 .avatar img, .user-avatar img {
   width: 100%;
