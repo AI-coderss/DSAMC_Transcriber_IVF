@@ -6,6 +6,7 @@ import Loader from "./Loader";
 import useTranscriptStore from "../store/useTranscriptStore"; // Import Zustand store
 import "../styles/AudioRecorder.css";
 
+
 const AudioRecorder = ({ setFields }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
