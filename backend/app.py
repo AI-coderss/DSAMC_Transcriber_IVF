@@ -8,8 +8,16 @@ import tempfile
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, origins=[
-    "https://dsamc-transcriber-ivf-ekthar-center.onrender.com"], supports_credentials=True)
+CORS(
+    app,
+    origins=[
+        "https://dsamc-transcriber-ivf-ekthar-center.onrender.com",
+        "http://localhost:3000"
+    ],
+    supports_credentials=True,
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "OPTIONS"]
+)
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
