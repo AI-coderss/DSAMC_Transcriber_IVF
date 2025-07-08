@@ -94,7 +94,7 @@ const AudioRecorder = ({ setFields }) => {
 
       // Step 2: Extract fields from the transcript
       const { data: fieldsData } = await axios.post(
-        "https://dsamc-transcriber-ivf-ekthar-center-wvyf.onrender.com/extract-fields",
+        "https://dsamc-transcriber-ivf-ekthar-center-wvyf.onrender.com/extract_fields",
         { transcript }
       );
 
