@@ -1,3 +1,22 @@
+/* Hide vertical scrollbar while allowing scroll */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just to make it fully hidden */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none; /* Hides scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html, body {
+  overflow-y: scroll;  /* Enables scrolling */
+  direction: ltr; /* Ensure scrollbars aren't flipped to the left */
+}
+
+
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -5,7 +24,10 @@
     width: 100%;
   background: #ffffff; /* Clean white background */
   overflow: hidden;
+   scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
 }
+
 
 .content {
   display: flex;

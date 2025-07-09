@@ -1,5 +1,5 @@
 .chat-content {
-    width: 75%; /* 75%   of the viewport */
+  width: 75%; /* 75% of the viewport */
   height: 660px;
   margin: 0%;
   overflow-y: auto;
@@ -8,11 +8,12 @@
   padding-bottom: 7rem;
   z-index: 9;
   transition: max-height 0.3s ease-in-out;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-/* Chat Content Scrollbar Styling */
 .chat-content::-webkit-scrollbar {
-  width: 10px;
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .chat-content::-webkit-scrollbar-track {

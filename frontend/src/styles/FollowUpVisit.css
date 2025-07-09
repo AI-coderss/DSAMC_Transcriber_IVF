@@ -1,10 +1,14 @@
 /* FollowUpVisit.css */
-
 .follow-up-visit {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.follow-up-visit::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
   h1 {
     text-align: center;
     margin-bottom: 20px;
