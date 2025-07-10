@@ -78,7 +78,7 @@ textarea:hover {
 }
 
 textarea:focus {
-  border-color: #007bff; /* Blue border on focus */
+  border-color: #F3AB25;
   box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3); /* Blue shadow on focus */
   background-color: #ffffff; /* Keep the background white */
   outline: none; /* Remove default outline */
@@ -98,7 +98,7 @@ textarea:focus {
 }
 
 .copy-icon-container:hover {
-  color: #007bff; /* Darker blue on hover */
+  color:#F3AB25; 
 }
 
 .copy-label {
@@ -111,7 +111,7 @@ textarea:focus {
 }
 
 .button {
-  background-color: #007bff; /* Blue button */
+  background-color:#F3AB25; /* Blue button */
   border: none; /* No border for buttons */
   color: #ffffff; /* White text */
   padding: 12px 24px;
